@@ -7,6 +7,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       showMenu: false,
+      restaurantData: {
+        menu: {},
+        hours: {},
+      },
+
     }
     this.getData = this.getData.bind(this);
     this.showMenu = this.showMenu.bind(this);
@@ -25,21 +30,24 @@ class App extends React.Component {
     console.log('getting');
     axios.get('/description')
       .then((res) => {
-        console.log('got ur datas bro');
         console.log(res.data);
+        this.setState({restaurantData: res.data});
       });
   }
 
+  componentDidMount() {
+    this.getData();
+  }
+  
   render() {
     return (
       <div>
         Hello World!
         <br></br>
-        <button onClick={ this.getData }>Get Data</button>
         <br></br>
-        <button onClick={ this.showMenu }>Show Menu</button>
+        <button onClick={this.showMenu}>Show Menu</button>
         <br></br>
-        <Menu show={this.state.showMenu} hideMenu={this.hideMenu}/>
+        <Menu show={this.state.showMenu} hideMenu={this.hideMenu} menuInfo={this.state.restaurantData.menu}/>
       </div>
     )
   }
