@@ -13,7 +13,6 @@ class App extends React.Component {
       },
 
     }
-    this.getData = this.getData.bind(this);
     this.showMenu = this.showMenu.bind(this);
     this.hideMenu = this.hideMenu.bind(this);
   }
@@ -39,6 +38,7 @@ class App extends React.Component {
     this.getData();
   }
   
+
   render() {
     return (
       <div>
@@ -47,7 +47,12 @@ class App extends React.Component {
         <br></br>
         <button onClick={this.showMenu}>Show Menu</button>
         <br></br>
-        <Menu show={this.state.showMenu} hideMenu={this.hideMenu} menuInfo={this.state.restaurantData.menu}/>
+        <Menu 
+          show={this.state.showMenu} 
+          hideMenu={this.hideMenu} 
+          menuInfo={this.state.restaurantData.menu}
+          name={this.state.restaurantData.restaurant_name}
+        />
       </div>
     )
   }

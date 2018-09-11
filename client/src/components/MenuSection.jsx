@@ -4,8 +4,16 @@ import MenuItem from './MenuItem.jsx'
 const MenuSection = (props) => {
   return (
     <div>
-      {props.section}
-      {props.items.map(item => <MenuItem key={item.item_name} details={item}/>)}
+      <h4>
+        {props.section}
+      </h4>
+      {props.items.map(item => 
+        <MenuItem 
+          key={item.item_name} 
+          details={item}
+        />
+      )}
+      <br></br>
     </div>
   )
 }
