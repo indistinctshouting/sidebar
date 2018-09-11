@@ -1,6 +1,5 @@
 import React from 'React';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
+import axios from 'axios';
 
 
 class App extends React.Component {
@@ -11,14 +10,11 @@ class App extends React.Component {
 
   getData() {
     console.log('getting');
-    $.ajax({
-      type: 'GET',
-      url: 'http://localhost:3003/description',
-      contentType: 'application/json',
-      success: (results) => {
-        console.log(results);
-      }
-    });
+    axios.get('/description')
+      .then((res) => {
+        console.log('got ur datas bro');
+        console.log(res.data);
+      });
   }
 
   render() {

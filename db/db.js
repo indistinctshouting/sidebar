@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const key = require('./MONGOOSE_KEY');
 
-const db = mongoose.connect(key.MONGOOSE_KEY);
+const connection = mongoose.createConnection(key.MONGOOSE_KEY, {useNewUrlParser: true});
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
@@ -24,8 +24,15 @@ const RestaurantInfo = new Schema({
   },
 });
 
+const findOneRestaurant = (restID, callback) => {
+  let dataModel = connection.model('Info', RestaurantInfo);
+  let query = dataModel.findOne({'restaurant_ID': restID});
+  query.exec(callback);
+}
+
 module.exports = {
-  db,
+  connection,
   RestaurantInfo,
   ObjectId,
-}
+  findOneRestaurant,
+};

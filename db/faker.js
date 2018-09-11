@@ -55,7 +55,7 @@ let hoursMaker = () => {
 }
 
 for (let i = 1; i <= 100; i++) {
-  const Info = mongoose.model('Info', db.RestaurantInfo);
+  const Info = db.connection.model('Info', db.RestaurantInfo);
   const info = new Info({
     id: db.ObjectId,
     restaurant_name: faker.company.companyName(),
