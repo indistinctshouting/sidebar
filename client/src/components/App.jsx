@@ -1,11 +1,24 @@
 import React from 'React';
 import axios from 'axios';
-
+import Menu from './Menu.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      showMenu: false,
+    }
     this.getData = this.getData.bind(this);
+    this.showMenu = this.showMenu.bind(this);
+    this.hideMenu = this.hideMenu.bind(this);
+  }
+
+  showMenu() {
+    this.setState({showMenu: true});
+  }
+
+  hideMenu() {
+    this.setState({showMenu: false});
   }
 
   getData() {
@@ -21,7 +34,12 @@ class App extends React.Component {
     return (
       <div>
         Hello World!
-        <button onClick={ this.getData }>GetData</button>
+        <br></br>
+        <button onClick={ this.getData }>Get Data</button>
+        <br></br>
+        <button onClick={ this.showMenu }>Show Menu</button>
+        <br></br>
+        <Menu show={this.state.showMenu} hideMenu={this.hideMenu}/>
       </div>
     )
   }

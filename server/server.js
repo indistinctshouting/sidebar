@@ -4,9 +4,8 @@ const db = require('../db/db.js');
 
 let app = express();
 
-app.use( bodyParser.json() );
-app.use( bodyParser.urlencoded({ extended: false }));
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/../client/dist'));
 
 app.get('/description', (req, res) => {
@@ -15,7 +14,6 @@ app.get('/description', (req, res) => {
     if (err) {
       console.log('oh no!!! something went wrong with the query');
     } else {
-      console.log(restaurant);
       res.send(restaurant);
     }
   })
