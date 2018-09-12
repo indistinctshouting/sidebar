@@ -42,7 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        Hello World!
+        Yelp
         <br></br>
         <br></br>
         <button onClick={this.showMenu}>Show Menu</button>
