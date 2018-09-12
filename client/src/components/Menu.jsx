@@ -2,7 +2,7 @@ import React from 'react';
 import MenuSection from './MenuSection.jsx';
 
 const Menu = (props) => {
-  const showOrHideClass = props.show ? "modal display-block" : "display-none";
+  const showOrHideClass = (props.show) ? "modal display-block" : "display-none";
   return (
     <div className={showOrHideClass}>
       <section className="modal-main">
