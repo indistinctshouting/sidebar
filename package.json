@@ -16,8 +16,12 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>spec/setup/setupTests.js",
-    "testPathIgnorePatterns": ["<rootDir>/spec/setup/"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/spec/setup/"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -46,6 +50,7 @@
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.4",
+    "sinon": "^6.3.1",
     "webpack": "^4.18.0",
     "webpack-cli": "^3.1.0"
   }

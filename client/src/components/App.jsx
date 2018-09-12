@@ -26,10 +26,8 @@ class App extends React.Component {
   }
 
   getData() {
-    console.log('getting');
     axios.get('/description')
       .then((res) => {
-        console.log(res.data);
         this.setState({restaurantData: res.data});
       });
   }
