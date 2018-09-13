@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import MenuSection from '../../client/src/components/MenuSection';
 
 describe('MenuSection', () => {
@@ -26,4 +26,4 @@ describe('MenuSection', () => {
     let sections = wrapper.find('MenuItem');
     expect(sections.length).toEqual(3);
   });
-})
+});

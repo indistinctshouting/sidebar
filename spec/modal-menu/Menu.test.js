@@ -36,7 +36,7 @@ describe('Menu', () => {
 
   it('should not have MenuSection components if the menu object is empty', () => {
     let menuSections = wrapper.find('MenuSection');
-    expect(menuSections.isEmpty()).toEqual(true);
+    expect(menuSections.exists()).toEqual(false);
   });
 
   it('should have the correct number of MenuSection components', () => {
