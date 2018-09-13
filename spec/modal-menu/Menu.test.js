@@ -1,8 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
-import Menu from '../../client/src/components/Menu'
-
+import Menu from '../../client/src/components/Menu';
 
 describe('Menu', () => {
   let wrapper;
