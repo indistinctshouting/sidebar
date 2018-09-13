@@ -26,10 +26,8 @@ class App extends React.Component {
   }
 
   getData() {
-    console.log('getting');
     axios.get('/description')
       .then((res) => {
-        console.log(res.data);
         this.setState({restaurantData: res.data});
       });
   }
@@ -42,7 +40,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        Hello World!
+        Yelp
         <br></br>
         <br></br>
         <button onClick={this.showMenu}>Show Menu</button>
