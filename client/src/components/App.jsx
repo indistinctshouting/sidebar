@@ -1,6 +1,6 @@
 import React from 'React';
 import axios from 'axios';
-import Menu from './Menu.jsx';
+import Menu from './Menu/Menu.jsx';
 
 class App extends React.Component {
   constructor(props) {
