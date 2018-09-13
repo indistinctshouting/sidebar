@@ -4,6 +4,7 @@ import MenuItem from '../../client/src/components/MenuItem';
 
 describe('MenuItem', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(
       <MenuItem
@@ -35,4 +36,5 @@ describe('MenuItem', () => {
     let description = wrapper.find('p');
     expect(description.text()).toMatch('it is a potater');
   });
+  
 });

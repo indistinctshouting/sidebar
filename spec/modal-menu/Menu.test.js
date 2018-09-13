@@ -4,6 +4,7 @@ import Menu from '../../client/src/components/Menu';
 
 describe('Menu', () => {
   let wrapper;
+
   beforeEach(() => {
     wrapper = shallow(
       <Menu 
@@ -52,4 +53,5 @@ describe('Menu', () => {
     let menuSections = wrapper.find('MenuSection');
     expect(menuSections.length).toEqual(2);
   })
+  
 });

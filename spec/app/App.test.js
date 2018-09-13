@@ -1,13 +1,11 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import sinon from 'sinon';
+import { shallow} from 'enzyme';
 import App from '../../client/src/components/App';
 import Menu from '../../client/src/components/Menu'
 
-const axios = require('axios');
-
 describe('App', () => {
   let wrapper;
+  
   beforeEach(() => {
     wrapper = shallow(<App />);
   });
@@ -43,10 +41,6 @@ describe('App', () => {
     expect(wrapper.state('showMenu')).toBe(false);
   });
 
-  // it ('should perform a get request', () => {
-  //   sinon.spy(App.prototype, 'componentDidMount');
-  //   expect(App.prototype.componentDidMount.calledOnce).to.equal(true);
-  // })
 });
 
 
