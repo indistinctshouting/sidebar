@@ -1,6 +1,7 @@
 import React from 'React';
 import axios from 'axios';
 import Menu from './Menu/Menu.jsx';
+import Hours from './Hours/Hours.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends React.Component {
         menu: {},
         hours: {},
       },
-
+      date: undefined,
     }
     this.showMenu = this.showMenu.bind(this);
     this.hideMenu = this.hideMenu.bind(this);
@@ -28,7 +29,8 @@ class App extends React.Component {
   getData() {
     axios.get('/description')
       .then((res) => {
-        this.setState({restaurantData: res.data});
+        console.log(res.data);
+        this.setState({restaurantData: res.data, date: new Date()});
       });
   }
 
@@ -39,7 +41,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sidebar">
         Yelp
         <br></br>
         <br></br>
@@ -51,6 +53,8 @@ class App extends React.Component {
           menuInfo={this.state.restaurantData.menu}
           name={this.state.restaurantData.restaurant_name}
         />
+        <br></br>
+        <Hours hours={this.state.restaurantData.hours}/>
       </div>
     )
   }
