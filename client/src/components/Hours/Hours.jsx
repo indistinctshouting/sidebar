@@ -11,13 +11,21 @@ import HourItem from './HoursItem.jsx';
 const Hours = (props) => {
   let days = Object.keys(props.hours);
   return (
-    <div>
-      {days.map(day => 
-        <HourItem 
-          key={day} 
-          day={day} 
-          hours={props.hours[day]}
-        />)}
+    <div className="sidebar">
+      <h4 className="red-text">
+        Hours
+      </h4>
+      <table>
+        <tbody>
+          {days.map(day => 
+            <HourItem 
+              key={day} 
+              day={day} 
+              hours={props.hours[day]}
+            />
+          )}
+        </tbody>
+      </table>
     </div>
   )
 }
