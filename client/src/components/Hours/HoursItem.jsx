@@ -11,7 +11,9 @@ const HoursItem = (props) => {
         {props.day}
       </th>
       <td>
-        <span className="hours time">{props.hours}</span>
+        <span className="hours time">
+          {props.hours}
+        </span>
       </td>
     </tr>
   )
