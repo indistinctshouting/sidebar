@@ -3,15 +3,14 @@ import React from 'react';
 const HoursItem = (props) => {
   let openOrClosedClass = 'check-open';
   let statusText;
-  if (props.currDay === props.day) {
-    if (props.isOpen) {
-      openOrClosedClass = openOrClosedClass + ' green-text';
-      statusText = 'Open Now';
-    } else {
-      openOrClosedClass = openOrClosedClass + ' red-text';
-      statusText = 'Closed Now';
-    }
+  if (props.isOpen) {
+    openOrClosedClass = openOrClosedClass + ' green-text';
+    statusText = 'Open Now';
+  } else {
+    openOrClosedClass = openOrClosedClass + ' red-text';
+    statusText = 'Closed Now';
   }
+
 
   return(
     <tr>
