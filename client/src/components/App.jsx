@@ -1,6 +1,7 @@
 import React from 'React';
 import axios from 'axios';
 import Menu from './Menu/Menu.jsx';
+import Hours from './Hours/Hours.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends React.Component {
   getData() {
     axios.get('/description')
       .then((res) => {
+        console.log(res.data);
         this.setState({restaurantData: res.data});
       });
   }
@@ -51,6 +53,8 @@ class App extends React.Component {
           menuInfo={this.state.restaurantData.menu}
           name={this.state.restaurantData.restaurant_name}
         />
+        <br></br>
+        <Hours hours={this.state.restaurantData.hours}/>
       </div>
     )
   }

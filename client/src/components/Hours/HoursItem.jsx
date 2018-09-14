@@ -2,7 +2,9 @@ import React from 'react';
 
 const HoursItem = (props) => (
   <div>
-    This is a day's Hours
+    <h4>{props.day}</h4>
+    <br></br>
+    <h4>{props.hours}</h4>
   </div>
 )
 
