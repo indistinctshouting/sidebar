@@ -12,7 +12,7 @@ class App extends React.Component {
         menu: {},
         hours: {},
       },
-
+      date: undefined,
     }
     this.showMenu = this.showMenu.bind(this);
     this.hideMenu = this.hideMenu.bind(this);
@@ -30,7 +30,7 @@ class App extends React.Component {
     axios.get('/description')
       .then((res) => {
         console.log(res.data);
-        this.setState({restaurantData: res.data});
+        this.setState({restaurantData: res.data, date: new Date()});
       });
   }
 
