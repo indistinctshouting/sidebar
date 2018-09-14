@@ -11,7 +11,6 @@ const HoursItem = (props) => {
     statusText = 'Closed Now';
   }
 
-
   return(
     <tr>
       <th className="hours day">
