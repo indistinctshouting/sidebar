@@ -11,7 +11,7 @@ import HourItem from './HoursItem.jsx';
 const Hours = (props) => {
   let days = Object.keys(props.hours);
   return (
-    <div className="sidebar">
+    <div>
       <h4 className="red-text">
         Hours
       </h4>
