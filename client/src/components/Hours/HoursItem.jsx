@@ -1,25 +1,35 @@
 import React from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
 
 const HoursItem = (props) => {
-  if (props.today) {
-    // check if today, then check if hour is open / closed
+  let openOrClosedClass = 'check-open';
+  let statusText;
+  if (props.currDay === props.day) {
+    if (props.isOpen) {
+      openOrClosedClass = openOrClosedClass + ' green-text';
+      statusText = 'Open Now';
+    } else {
+      openOrClosedClass = openOrClosedClass + ' red-text';
+      statusText = 'Closed Now';
+    }
   }
+
   return(
     <tr>
       <th className="hours day">
         {props.day}
       </th>
-      <td>
-        <span className="hours time">
+      <td className="hours time">
+        <span>
           {props.hours}
+        </span>
+      </td>
+      <td className={openOrClosedClass}>
+        <span>
+          {(props.day === props.currDay) ? statusText : null}
         </span>
       </td>
     </tr>
   )
-  // <div>
-  //   <h4>{props.day} {props.hours}</h4>
-  // </div>
 }
 
 export default HoursItem;

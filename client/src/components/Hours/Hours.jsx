@@ -1,15 +1,31 @@
 import React from 'React';
 import HourItem from './HoursItem.jsx';
+import moment from 'moment';
 
 //string.toUpperCase().split(' - '); for time to show AM/PM
-//min time and max time
-//take current time from new Date();
-//convert Date() to 12hour AMPM with
-//.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
+//open time and close time
+//take current time from moment();
 //compare date now with date bounds;
+//render open now / closed now if 
+// day matches currday
+
+let currDay = moment().format('dddd').slice(0, 3);
+let currHours = moment().format('h:mma');
+let currHoursMoment = moment(currHours, 'h:mma');
 
 const Hours = (props) => {
   let days = Object.keys(props.hours);
+  let hourBounds, startToday, endToday, isOpen;
+
+  if (!!props.hours[currDay]) {
+    hourBounds = props.hours[currDay].replace(' ', '').split('-');
+  }
+  if (!!hourBounds) {
+    startToday = moment(hourBounds[0], 'h:mma');
+    endToday = moment(hourBounds[1], 'h:mma');
+    isOpen = (currHoursMoment.isAfter(startToday) && currHoursMoment.isBefore(endToday));
+  }
+
   return (
     <div>
       <h4 className="red-text">
@@ -22,6 +38,8 @@ const Hours = (props) => {
               key={day} 
               day={day} 
               hours={props.hours[day]}
+              currDay={currDay}
+              isOpen={isOpen}
             />
           )}
         </tbody>
