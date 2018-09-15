@@ -46,17 +46,20 @@ class App extends React.Component {
         Yelp
         <br></br>
         <br></br>
-        <Summary
-          hours={this.state.restaurantData.hours}
-          showMenu={this.showMenu}
-          priceRange={this.state.restaurantData.price_range}
-          health={this.state.restaurantData.health_score}
-        />
-        <br></br>
-        <Hours
-          hours={this.state.restaurantData.hours}
-          className="sidebar"
-        />
+        <div className="sidebar">
+          <Summary
+            hours={this.state.restaurantData.hours}
+            showMenu={this.showMenu}
+            priceRange={this.state.restaurantData.price_range}
+            health={this.state.restaurantData.health_score}
+          />
+        </div>
+        <div className="sidebar">
+          <Hours
+            hours={this.state.restaurantData.hours}
+          />
+        </div>
+
         <Menu
           show={this.state.showMenu}
           hideMenu={this.hideMenu}

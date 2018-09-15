@@ -21,24 +21,30 @@ const Summary = (props) => {
   }
 
   return (
-    <ul className="sidebar summary">
-      <TimeToday 
-        times={props.hours[currDay]} 
-        isOpen={isOpen}
-        className="summary-item"
-      />
-      <MenuButton 
-        showMenu={props.showMenu}
-        className="summary-item"
-      />
-      <Price 
-        priceRange={props.priceRange}
-        className="summary-item"
-      />
-      <Health 
-        score={props.health}
-        className="summary-item"
-      />
+    <ul className="summary">
+      <div className="summary-item">
+        <TimeToday
+          times={props.hours[currDay]}
+          isOpen={isOpen}
+        />
+      </div>
+      <div className="summary-item">
+        <MenuButton
+          showMenu={props.showMenu}
+        />
+      </div>
+      <div className="summary-item">
+        <Price
+          priceRange={props.priceRange}
+        />
+
+      </div>
+      <div className="summary-item">
+        <Health
+          score={props.health}
+        />
+      </div>
+
     </ul>
   )
 }
