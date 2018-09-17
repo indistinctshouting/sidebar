@@ -37,14 +37,12 @@ const Summary = (props) => {
         <Price
           priceRange={props.priceRange}
         />
-
       </div>
       <div className="summary-item">
         <Health
           score={props.health}
         />
       </div>
-
     </ul>
   )
 }
