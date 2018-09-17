@@ -42,24 +42,25 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sidebar">
         Yelp
         <br></br>
         <br></br>
-        <div className="sidebar">
-          <Summary
-            hours={this.state.restaurantData.hours}
-            showMenu={this.showMenu}
-            priceRange={this.state.restaurantData.price_range}
-            health={this.state.restaurantData.health_score}
-          />
-        </div>
-        <div className="sidebar">
-          <Hours
-            hours={this.state.restaurantData.hours}
-          />
-        </div>
-
+        <table className="table-container">
+          <tr>
+            <Summary
+              hours={this.state.restaurantData.hours}
+              showMenu={this.showMenu}
+              priceRange={this.state.restaurantData.price_range}
+              health={this.state.restaurantData.health_score}
+            />
+          </tr>
+          <tr>
+            <Hours
+              hours={this.state.restaurantData.hours}
+            />
+          </tr>
+        </table>
         <Menu
           show={this.state.showMenu}
           hideMenu={this.hideMenu}
