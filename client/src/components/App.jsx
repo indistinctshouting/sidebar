@@ -28,7 +28,8 @@ class App extends React.Component {
   }
 
   getData() {
-    axios.get('/description')
+    const id = window.location.pathname.split('/')[2];
+    axios.get(`/restaurant/${id}/description`)
       .then((res) => {
         console.log(res.data);
         this.setState({ restaurantData: res.data, date: new Date() });
