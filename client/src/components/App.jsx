@@ -46,21 +46,21 @@ class App extends React.Component {
         Yelp
         <br></br>
         <br></br>
-        <table className="table-container">
-          <tr>
+        <div className="sidebar-container">
+          <div className="summary-container">
             <Summary
               hours={this.state.restaurantData.hours}
               showMenu={this.showMenu}
               priceRange={this.state.restaurantData.price_range}
               health={this.state.restaurantData.health_score}
             />
-          </tr>
-          <tr>
+          </div>
+          <div className="hour-container">
             <Hours
               hours={this.state.restaurantData.hours}
             />
-          </tr>
-        </table>
+          </div>
+        </div>
         <Menu
           show={this.state.showMenu}
           hideMenu={this.hideMenu}

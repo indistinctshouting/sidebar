@@ -27,7 +27,7 @@ const Hours = (props) => {
   }
 
   return (
-    <div className="hours-container">
+    <div>
       <h4 className="red-text">
         Hours
       </h4>
