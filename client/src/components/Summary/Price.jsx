@@ -13,8 +13,10 @@ const Price = (props) => (
       <FontAwesomeIcon icon="dollar-sign" />
       <FontAwesomeIcon icon="dollar-sign" />
     </div>
-    <span className="sum-detail-text">Price Range </span>
-    <span className="menu-item-text sum-detail-text">{props.priceRange}</span>
+    <div>
+      <span className="sum-detail-text">Price Range </span>
+      <span className="menu-item-text sum-detail-text">{props.priceRange}</span>
+    </div>
   </li>
 )
 

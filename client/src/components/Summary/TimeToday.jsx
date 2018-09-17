@@ -7,23 +7,27 @@ library.add(faClock);
 
 const TimeToday = (props) => {
   let openOrClosedClass = 'summary-check-open';
-  let statusText;
+  let statusText, iconColor;
   if (props.isOpen) {
     openOrClosedClass = openOrClosedClass + ' green-text';
     statusText = 'Open Now';
+    iconColor = 'green-text'
   } else {
     openOrClosedClass = openOrClosedClass + ' red-text';
     statusText = 'Closed Now';
+    iconColor = 'red-text';
   }
 
   return (
     <li className="time-container">
       <div className="summary-icon">
-        <FontAwesomeIcon icon="clock"/>
+        <FontAwesomeIcon icon="clock" className={iconColor}/>
       </div>
-      <span>Today</span>
-      <span className="menu-item-text">{props.times}</span>
-      <span className={openOrClosedClass + " menu-item-text"}> {statusText}</span>
+      <div>
+        <span>Today</span>
+        <span className="menu-item-text"> {props.times}</span>
+        <span className={openOrClosedClass + " menu-item-text"}> {statusText}</span>
+      </div>
     </li>
   )
 }
