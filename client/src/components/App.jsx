@@ -2,7 +2,8 @@ import React from 'React';
 import axios from 'axios';
 import Menu from './Menu/Menu.jsx';
 import Hours from './Hours/Hours.jsx';
-import Summary from './Summary/Summary.jsx'
+import Summary from './Summary/Summary.jsx';
+import styles from './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,12 +44,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="sidebar">
+      <div className={styles.sidebar}>
         Yelp
         <br></br>
         <br></br>
-        <div className="sidebar-container">
-          <div className="summary-container">
+        <div className={styles.sidebarcontainer}>
+          <div>
             <Summary
               hours={this.state.restaurantData.hours}
               showMenu={this.showMenu}
@@ -56,7 +57,7 @@ class App extends React.Component {
               health={this.state.restaurantData.health_score}
             />
           </div>
-          <div className="hour-container">
+          <div className={styles.hourcontainer}>
             <Hours
               hours={this.state.restaurantData.hours}
             />

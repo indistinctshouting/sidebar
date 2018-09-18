@@ -1,22 +1,23 @@
 import React from 'react';
+import style from './Hours.css';
 
 const HoursItem = (props) => {
-  let openOrClosedClass = 'check-open';
+  let openOrClosedClass = style.checkopen;
   let statusText;
   if (props.isOpen) {
-    openOrClosedClass = openOrClosedClass + ' green-text';
+    openOrClosedClass = `${openOrClosedClass} ${style.greentext}`;
     statusText = 'Open Now';
   } else {
-    openOrClosedClass = openOrClosedClass + ' red-text';
+    openOrClosedClass = `${openOrClosedClass} ${style.redtext}`;
     statusText = 'Closed Now';
   }
 
   return(
     <tr>
-      <th className="hours day">
+      <th className={`${style.hours} ${style.day}`}>
         {props.day}
       </th>
-      <td className="hours time">
+      <td className={`${style.hours} ${style.time}`}>
         <span>
           {props.hours}
         </span>

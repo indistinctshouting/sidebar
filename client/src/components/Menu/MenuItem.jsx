@@ -1,5 +1,6 @@
 import React from 'react';
 import { Media } from 'react-bootstrap';
+import style from './Menu.css';
 
 let emptyImage = "https://s3-media2.fl.yelpcdn.com/assets/2/www/img/dca54f97fb84/default_avatars/menu_medium_square.png";
 
@@ -9,11 +10,11 @@ const MenuItem = (props) => {
       <hr/>
       <Media>
         <Media.Left align="middle">
-          <img width={70} height={70} src={emptyImage} alt="thumbnail"/>
+          <img className={style.menuimage} width={70} height={70} src={emptyImage} alt="thumbnail"/>
         </Media.Left>
         <Media.Body>
           <Media.Heading componentClass="h5" bsClass="pull-left">
-            <strong className="blue-text">
+            <strong className={style.bluetext}>
               {props.details.item_name}
             </strong>
         </Media.Heading>

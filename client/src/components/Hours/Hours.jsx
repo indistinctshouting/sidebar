@@ -1,6 +1,7 @@
 import React from 'React';
 import HourItem from './HoursItem.jsx';
 import moment from 'moment';
+import style from './Hours.css';
 
 //string.toUpperCase().split(' - '); for time to show AM/PM
 //open time and close time
@@ -28,7 +29,7 @@ const Hours = (props) => {
 
   return (
     <div>
-      <h4 className="red-text">
+      <h4 className={style.redtext}>
         Hours
       </h4>
       <table>

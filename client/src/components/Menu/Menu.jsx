@@ -1,11 +1,12 @@
 import React from 'react';
 import MenuSection from './MenuSection.jsx';
+import style from './Menu.css';
 
 const Menu = (props) => {
-  const showOrHideClass = (props.show) ? "modal display-block" : "display-none";
+  const showOrHideClass = (props.show) ? `${style.modal} ${style.displayblock}` : `${style.displaynone}`;
   return (
     <div className={showOrHideClass}>
-      <section className="modal-main">
+      <section className={style.modalmain}>
         <h4>
           Menu For {props.name}
           <button type="button" className="close" aria-label="Close" onClick={props.hideMenu}>

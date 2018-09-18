@@ -2,17 +2,18 @@ import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import style from './Summary.css';
 
 library.add(faPlusSquare);
 
 const Health = (props) => (
-  <li className="health-container">
-    <div className="summary-icon">
+  <li className={style.container}>
+    <div className={style.summaryicon}>
       <FontAwesomeIcon icon="plus-square"/>
     </div>
     <div>
-      <span className="blue-text menu-item-text sum-detail-text">Health Score </span>
-      <span className="menu-item-text sum-detail-text">{props.score} out of 100</span>
+      <span className={`${style.bluetext} ${style.bolded}`}>Health Score </span>
+      <span className={style.bolded}>{props.score} out of 100</span>
     </div>
   </li>
 )
