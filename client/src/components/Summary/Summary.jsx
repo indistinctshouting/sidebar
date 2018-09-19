@@ -27,6 +27,16 @@ const Summary = (props) => {
     }
   }
 
+  let menuButton;
+  if (props.menuExists) {
+    menuButton = 
+    <div className={style.summaryitem}>
+      <MenuButton
+        showMenu={props.showMenu}
+      />
+    </div>
+  }
+
   return (
     <ul className={style.summary}>
       <div className={style.summaryitem}>
@@ -35,11 +45,7 @@ const Summary = (props) => {
           isOpen={isOpen}
         />
       </div>
-      <div className={style.summaryitem}>
-        <MenuButton
-          showMenu={props.showMenu}
-        />
-      </div>
+      {menuButton}
       <div className={style.summaryitem}>
         <Price
           priceRange={props.priceRange}
