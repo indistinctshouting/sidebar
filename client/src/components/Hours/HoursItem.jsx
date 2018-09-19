@@ -14,16 +14,18 @@ const HoursItem = (props) => {
 
   return(
     <tr>
-      <th className={`${style.hours} ${style.day}`}>
+      <th>
+      <span className={`${style.hours} ${style.day}`}>
         {props.day}
+      </span>
       </th>
-      <td className={`${style.hours} ${style.time}`}>
-        <span>
+      <td>
+        <span className={`${style.hours} ${style.time}`}>
           {props.hours}
         </span>
       </td>
-      <td className={openOrClosedClass}>
-        <span>
+      <td>
+        <span className={openOrClosedClass}>
           {(props.day === props.currDay) ? statusText : null}
         </span>
       </td>
