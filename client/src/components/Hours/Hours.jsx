@@ -35,10 +35,10 @@ const Hours = (props) => {
 
   return (
     <div>
-      <h4 className={style.redtext}>
+      <span className={style.redtext}>
         Hours
-      </h4>
-      <table>
+      </span>
+      <table className={style.tablepadding}>
         <tbody>
           {days.map(day => 
             <HourItem 
