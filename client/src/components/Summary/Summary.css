@@ -21,6 +21,13 @@
 .summaryicon {
   align-self: center;
   justify-self: center;
+  font-size: 16px;
+}
+
+.summaryiconsmall {
+  align-self: center;
+  justify-self: center;
+  font-size: 12px;
 }
 
 .summarycheckopen {

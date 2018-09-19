@@ -8,7 +8,7 @@ library.add(faDollarSign);
 
 const Price = (props) => (
   <li className={style.container}>
-    <div className={style.summaryicon}>
+    <div className={style.summaryiconsmall}>
       <FontAwesomeIcon icon="dollar-sign" />
       <FontAwesomeIcon icon="dollar-sign" />
       <FontAwesomeIcon icon="dollar-sign" />
