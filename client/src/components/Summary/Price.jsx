@@ -32,7 +32,7 @@ const Price = (props) => {
         <FontAwesomeIcon icon="dollar-sign" className={color3}/>
         <FontAwesomeIcon icon="dollar-sign" className={color4}/>
       </div>
-      <div>
+      <div className={style.summarydiv}>
         <span>Price Range </span>
         <span className={style.bolded}>{props.priceRange}</span>
       </div>
