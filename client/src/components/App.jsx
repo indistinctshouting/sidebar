@@ -29,8 +29,8 @@ class App extends React.Component {
   }
 
   getData() {
-    const id = window.location.pathname.split('/')[2];
-    axios.get(`/restaurant/${id}/description`)
+    const id = window.location.pathname.split('/')[1];
+    axios.get(`/summary/id/${id}`)
       .then((res) => {
         console.log(res.data);
         this.setState({ restaurantData: res.data, date: new Date() });
@@ -45,9 +45,6 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.sidebar}>
-        Yelp
-        <br></br>
-        <br></br>
         <div className={styles.sidebarcontainer}>
           <div>
             <Summary
