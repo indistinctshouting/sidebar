@@ -9,7 +9,7 @@ const MenuItem = (props) => {
       <hr></hr>
       <div className={style.menuitem}>
         <div className={style.foodpic}>
-          <img width={70} height={70} src={emptyImage} alt="thumbnail" />
+          <img width={70} height={70} src={emptyImage} className={style.food} alt="thumbnail" />
         </div>
         <div className={style.foodinfo}>
           <div className={style.namecontainer}>
