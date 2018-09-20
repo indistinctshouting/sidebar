@@ -36,3 +36,15 @@
   white-space: nowrap;
   padding-right: 6px;
 }
+
+table {
+  border-spacing: 0px;
+}
+
+tbody {
+  vertical-align: baseline;
+}
+
+th {
+  text-align: left;
+}

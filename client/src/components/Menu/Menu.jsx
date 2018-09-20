@@ -7,13 +7,13 @@ const Menu = (props) => {
   return (
     <div className={showOrHideClass}>
       <section className={style.modalmain}>
-        <h4>
-          Menu For {props.name}
-          <button type="button" className="close" aria-label="Close" onClick={props.hideMenu}>
+        <h3>
+          <span className={style.resname}>Menu For {props.name}</span>
+          <button type="button" className={style.close} aria-label="Close" onClick={props.hideMenu}>
             <span>&#10005;</span>
           </button>
           <hr />
-        </h4>
+        </h3>
         {Object.keys(props.menuInfo).map(section =>
           <MenuSection
             key={section}

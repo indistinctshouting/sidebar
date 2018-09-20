@@ -34,6 +34,62 @@
   color: #0073BB;
 }
 
+.resname {
+  font-weight: 450;
+  font-size: 18px;
+}
+
+.secname {
+  font-weight: 450;
+  font-size: 16px;
+}
+
 .menuimage {
   border-radius: 10%;
+}
+
+.close{
+  float:right;
+  font-size:21px;
+  font-weight:700;
+  line-height:1;
+  color:#000;
+  opacity:.2;
+  -webkit-appearance:none;
+  padding:0;
+  cursor:pointer;
+  background:0 0;
+  border:0
+}
+
+hr {
+  border-top-color:#d5d5d5;
+  opacity: 0.25;
+}
+
+.menuitem {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+img {
+  border-radius: 10%;
+}
+
+.foodpic {
+  padding-left: 20%;
+}
+
+.foodinfo {
+  padding-left: 5%;
+}
+
+.namecontainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.price {
+  text-align: right;
+  padding-right: 5%;
 }
