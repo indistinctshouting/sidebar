@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const key = require('./MONGOOSE_KEY');
 
-const connection = mongoose.createConnection(key.MONGOOSE_KEY, {useNewUrlParser: true});
+const connection = mongoose.createConnection('mongodb://bro1:password1@ds149252.mlab.com:49252/yelp-restaurant-info', {useNewUrlParser: true});
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
