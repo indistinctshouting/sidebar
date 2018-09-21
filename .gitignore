@@ -6,7 +6,6 @@ npm
 npm-debug.log
 node_modules/
 
-*/MONGOOSE_KEY.js
 
 pids
 *.pid
