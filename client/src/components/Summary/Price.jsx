@@ -12,7 +12,6 @@ const Price = (props) => {
   if (!!props.priceRange) {
     prices = props.priceRange.replace('$','').split('-');
     price1 = parseInt(prices[0]);
-    console.log(price1);
     if (price1 >= 15) {
       color2 = style.greentext;
     } 

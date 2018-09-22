@@ -32,7 +32,6 @@ class Sidebar extends React.Component {
     const id = window.location.pathname.split('/')[1];
     axios.get(`/summary/id/${id}`)
       .then((res) => {
-        console.log(res.data);
         this.setState({ restaurantData: res.data, date: new Date() });
       });
   }
