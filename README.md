@@ -1,13 +1,11 @@
-# Project Name
+# Indistinct Shouting
 
-> Project description
+> A restaurant review app which displays a restaurants basic information inthe sidebar, photo carousel, and a reviews section.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/indistinctshouting/photos
+  - https://github.com/indistinctshouting/reviews-ratings
 
 ## Table of Contents
 
@@ -17,23 +15,11 @@
 
 ## Usage
 
-> Some usage instructions
+> Run npm install in the root directory to get set up, and npm build to populate a database with fake data. Use npm start to run this microservice on localhost:3003.
 
 ## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
+> node v 6.14.0 & up are required.
+  
 ## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+> If you would like to play around with the components and add your own features, use npm run react-dev to recompile the webpack bundle files in dev mode.
 
